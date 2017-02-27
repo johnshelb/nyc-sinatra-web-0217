@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit a Landmark</title>
+  </head>
+  <body>
+    <label><%=@landmark.name%></label>
+    <form action="/landmarks/<%=@landmark.id%>" method="post">
+      <input  type="text" id="landmark_name" name="landmark[name]" value="<%=@landmark.name%>">
+      <label>Year Completed</label>
+      <input type="text" name="landmark[year_completed]" id="landmark_year_completed" value="<%=@landmark.year_completed%>">
+
+
+
+      <h2>Add a new landmark: </h2>
+      <label>Name</label>
+      <input type="text" name="landmark[name]" id="name">
+      <label>Year Completed</label>
+      <input type="text" name="landmark[year_completed]" id="year_completed">
+
+      <input  type="submit" value="Edit Landmark">
+
+
+    </form>
+
+  </body>
+</html>
